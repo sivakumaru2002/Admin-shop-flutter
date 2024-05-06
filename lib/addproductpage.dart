@@ -87,13 +87,13 @@ class _AddProductPage extends State<AddProductPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('AddProduct'),
-        titleTextStyle:
-            const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-        backgroundColor: Colors.deepOrange,
+        titleTextStyle: const TextStyle(
+            fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+        backgroundColor: Color.fromARGB(255, 250, 159, 132),
       ),
       body: Center(
         child: Container(
-          height: 300,
+          height: 250,
           width: 300,
           decoration: BoxDecoration(
             color: const Color.fromARGB(255, 250, 167, 142),
@@ -105,6 +105,7 @@ class _AddProductPage extends State<AddProductPage> {
             ),
           ),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
                 padding: const EdgeInsets.all(18.0),
@@ -115,7 +116,7 @@ class _AddProductPage extends State<AddProductPage> {
                     filled: true,
                     fillColor: const Color.fromARGB(255, 249, 251, 252),
                     contentPadding: const EdgeInsets.symmetric(
-                      vertical: 25.0,
+                      vertical: 15.0,
                       horizontal: 30.0,
                     ),
                     border: OutlineInputBorder(
@@ -135,7 +136,7 @@ class _AddProductPage extends State<AddProductPage> {
                     filled: true,
                     fillColor: const Color.fromARGB(255, 249, 251, 252),
                     contentPadding: const EdgeInsets.symmetric(
-                      vertical: 25.0,
+                      vertical: 15.0,
                       horizontal: 40.0,
                     ),
                     border: OutlineInputBorder(
@@ -146,8 +147,8 @@ class _AddProductPage extends State<AddProductPage> {
               ),
               Padding(
                 padding: const EdgeInsets.all(18.0),
-                child: TextButton(
-                  style: TextButton.styleFrom(
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
                       foregroundColor: const Color.fromARGB(255, 255, 255, 255),
                       padding: const EdgeInsets.all(16.0),
                       textStyle: const TextStyle(fontSize: 20),

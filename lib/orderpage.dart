@@ -33,8 +33,6 @@ class OrderPage extends StatelessWidget {
         margin: EdgeInsets.all(5),
       );
       ScaffoldMessenger.of(context).showSnackBar(snackdemo);
-      // Navigator.push(
-      //     context, MaterialPageRoute(builder: (context) => const MyApp()));
       Navigator.pop(context, true);
     } else {
       const snackdemo = SnackBar(
@@ -69,13 +67,13 @@ class OrderPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('OrderPage'),
-        titleTextStyle:
-            const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-        backgroundColor: Colors.deepOrange,
+        titleTextStyle: const TextStyle(
+            fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+        backgroundColor: const Color.fromARGB(255, 245, 149, 120),
       ),
       body: Center(
         child: Container(
-          height: 300,
+          height: 350,
           width: 400,
           decoration: BoxDecoration(
             color: const Color.fromARGB(255, 250, 167, 142),
@@ -87,18 +85,20 @@ class OrderPage extends StatelessWidget {
             ),
           ),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  "(:${product.ProductName}:)",
-                  style: const TextStyle(color: Colors.white, fontSize: 25.0),
+                  "${product.ProductName}",
+                  style: const TextStyle(color: Colors.white, fontSize: 20.0),
                 ),
               ),
+              Image.asset('assets/images/default.jpg', height: 60, width: 60),
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  "Available Quantity <==> ${product.Quantity}",
+                  "Quantity:-${product.Quantity}",
                   style: const TextStyle(color: Colors.white, fontSize: 20.0),
                 ),
               ),
